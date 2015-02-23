@@ -62,7 +62,7 @@
                                 <i class="fa fa-dashboard"></i> <a href="index.php">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-edit"></i>Question Bank
+                                <i class="fa fa-edit"></i>FeedBack Results
                             </li>
                         </ol>
                     </div>
@@ -70,8 +70,8 @@
                 <!-- /.row --> 
                <!-- column text input-->
                <div class="row">
-                   <div class="col-lg-12">
-                                <div class="form-group">
+                             <div class="col-lg-6">
+                                       <div class="form-group">
                                 <label>Groups</label>
                                 <select class="form-control">
                                     <option id="1">Gym Equipment</option>
@@ -81,16 +81,23 @@
                                     <option id="6">Group 3</option>
                                 </select>
                             </div>
+                       </div>
+            
+               </div>
+               <div class="row">
+             <div class="col-lg-12">
                        <div class="table-responsive" id="questions">
                             <table class="table table-bordered table-hover table-striped">
                                 <thead>
                                     <tr>
                                         <th><label>
-                                        <input type="checkbox" value=""> </label></th>
+                                        <input type="checkbox" value="all"> </label></th>
                                         <th>Questions</th>
+                                         <th>Great</th>
+                                        <th>Good</th>
+                                         <th>Poor</th>
+                                         <th>Not good</th>
                                       
-                                        <th>Edit</th>
-                                        <th>Delete</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -98,16 +105,20 @@
                                         <td>  <label> <input type="checkbox" value=""></label></td>
                                         <td>How would you rate your overall experience so far with  Fitness gym </td>
                                          
-                                        <td> <a href="edit_questions.php"> <span class="glyphicon glyphicon-pencil"></span>   </a></td>
-                                        <td><a href="#">  <span class="glyphicon glyphicon-trash"></span>  </a></td>
+                                        <td> 34%</td>
+                                         <td> 37%</td>
+                                          <td> 29%</td>
+                                          <td> 25%</td>
+                                        
                                         
                                     </tr>
                                     <tr>
                                         <td>  <label> <input type="checkbox" value=""></label></td>
-                                        <td><?php echo 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'; ?> </td>
-                                         
-                                          <td>     <a href="edit_questions.php"> <span class="glyphicon glyphicon-pencil"></span>   </a></td>
-                                        <td> <a href="#">  <span class="glyphicon glyphicon-trash"></span>  </a></td>
+                                        <td><?php echo 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed'; ?> </td>
+                                          <td> 64%</td>
+                                         <td> 5%</td>
+                                          <td> 19%</td>
+                                          <td> 22%</td>
                                       
                                        
                                     </tr>
@@ -116,9 +127,10 @@
                                         <td>  <label> <input type="checkbox" value=""> </label></td>
                                         <td>How I feel about myself as a person </td>
                                           
-                                        <td>     <a href="#"> <span class="glyphicon glyphicon-pencil"></span>   </a></td>
-                                        <td><a href="#">  <span class="glyphicon glyphicon-trash"></span>  </a></td>
-                                        
+                                        <td> 23%</td>
+                                         <td> 41%</td>
+                                          <td> 36%</td>
+                                          <td> 49%</td>
                                     </tr>
                              
                                   
@@ -126,25 +138,19 @@
                             </table>
                             
                         </div>
-                        <button type="submit" class="btn btn-default">Save Collection</button>
+                       
                        <br>
                        
                    </div>
                         
                        <br>
                        <br>
+               </div><!-- feedback12 -->
                    </div>
-              
+               
                 <!-- /.feedback stmt -->
               
           
-                <!-- /.row -->
-              
-            
-      
-                <!-- /.row -->
-      
-            </div>
             <!-- /.container-fluid -->
 
         </div>
@@ -156,13 +162,15 @@
    
     <!-- Bootstrap Core JavaScript -->
      <!-- jQuery -->
-    <script src="../js/jquery.js"></script>
+    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
 
 
 </body>
 
 </html>
+
+

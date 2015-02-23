@@ -79,7 +79,7 @@
                            <form role="form" >
 
                             <div class="form-group">
-                              <textarea class="form-control" rows="3"><?php echo 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'; ?></textarea>
+                              <textarea class="form-control" rows="3"><?php echo 'How would you rate your overall experience so far with  Fitness gym .'; ?></textarea>
                              </div>
                               
                                    <div class="form-group">

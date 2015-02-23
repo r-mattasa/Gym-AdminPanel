@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title>Gym Admin panel</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -52,14 +52,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Forms
+                            New Group
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-edit"></i>Create Groups
+                                <i class="fa fa-edit"></i>Create new Groups
                             </li>
                         </ol>
                     </div>
@@ -68,7 +68,9 @@
 
                 <div class="row">
                     <div class="col-lg-6">
-
+                        <div class="alert alert-success" id="sucess_create">
+                    
+                </div>
                         <form role="form">
 
                             <div class="form-group">
@@ -76,7 +78,7 @@
                                 <input class="form-control" id="groupName" required="" placeholder="Enter group Name">
                             </div>                                               
                        
-                             <button type="submit" class="btn btn-default">Submit Button</button>
+                             <button type="submit" class="btn btn-default">Create group</button>
                         </form>              
                         
                       

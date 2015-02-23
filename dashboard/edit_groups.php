@@ -67,7 +67,10 @@
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
-                                <i class="fa fa-dashboard"></i> Dashboard
+                                <i class="fa fa-dashboard"></i> <a href="index.php">Dashboard</a>
+                            </li>
+                              <li class="active">
+                                <i class="fa fa-edit"></i> Edit Group
                             </li>
                         </ol>
                     </div>
@@ -76,7 +79,7 @@
                <!-- column text input-->
                <div class="row">
                    <div class="col-lg-6">
-                                         <form role="form">
+                              <form role="form">
 
                             <div class="form-group">
                                 <label>Create questionaire Group</label>
