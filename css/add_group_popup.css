@@ -1,0 +1,31 @@
+
+.entry-form{
+    background: #EDF2F6;
+    width: 700px;
+    padding: 10px;
+    border: 5px solid #C5D7E2;
+    box-shadow: 3px 3px 5px #888;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    display: none;
+    border-radius: 5px;
+}
+.entry-form input[type='text']{
+    border: 1px solid #BBBBBB;
+    box-shadow: 2px 2px 4px #C5D7E2 inset;
+    height: 25px;
+    width: 200px;
+}
+.entry-form input[type='text']:focus{
+    border: 1px solid #C5D7E2;
+}
+.question-table{
+    display: none;
+  
+}
+.question-table-new{
+    display: none;
+  
+}
+

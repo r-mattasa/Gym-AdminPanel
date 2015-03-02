@@ -29,22 +29,17 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script>
-        $(document).ready(function() {
-    $('#select_all').click(function(event) {  //on click 
-        if(this.checked) { // check select status
-            $('#checkbox1').each(function() { //loop through each checkbox
-                this.checked = true;  //select all checkboxes with class "checkbox1"               
-            });
-        }else{
-            $('#checkbox1').each(function() { //loop through each checkbox
-                this.checked = false; //deselect all checkboxes with class "checkbox1"                       
-            });         
-        }
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script language="javascript">
+   $(function(){$("#selectall").click(function(){
+    $('#checkbox1').attr('checked',this.checked);});
+    $("checkbox1").click(function(){
+    if($("#selectall").length==$(".case:checked").length){
+    $("#selectall").attr("checked","checked");}
+    else{
+    $("#selectall").removeAttr("checked");}});
     });
-    
-});
     </script>
 </head>
 

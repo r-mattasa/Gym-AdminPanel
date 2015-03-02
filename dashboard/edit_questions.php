@@ -67,7 +67,8 @@
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
-                                <i class="fa fa-dashboard"></i> Dashboard
+                                <i class="fa fa-dashboard"></i> Dashboard 
+                        
                             </li>
                         </ol>
                     </div>
@@ -100,21 +101,15 @@
                    </div>
                    
                    </div>
-               </div>
+               
                 <!-- /.feedback stmt -->
               
           
                 <!-- /.row -->
               
-                    </div>
-                      
+               
                     
-                      
-                </div>
                 
-          
-                    </div>
-                </div>
       
                 <!-- /.row -->
       
