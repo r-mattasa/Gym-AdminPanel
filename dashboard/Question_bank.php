@@ -68,7 +68,50 @@
                     </div>
                 </div>
                           <div class="row">
+                              <div class="col-lg-12">
+                               <div class=""  id="question_table" >
+                             <table class="table table-bordered table-hover table-striped">
+                                 <thead class="bg-primary">
+                                    <tr>
+                                        <th><label>Select </label></th>
+                                    <th>Questions</th>
+                                         <th> Group </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                     <tr>
+                                         <td>  <label><input type="checkbox" value="" id="checkbox1"> </label></td>
+                                        <td>How would you rate your overall experience so far with  Fitness gym </td>
+                                        <td><?php echo 'Group 1'; ?> </td>                                  
+                                    </tr>
+                                    <tr>
+                                        <td>  <label> <input type="checkbox" value="" id="checkbox1"></label></td>
+                                        <td><?php echo 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'; ?> </td>
+                                         
+                                          <td>    <?php echo 'Group 2'; ?> </td>
+                                            
+                                    </tr>
+                                          <tr>
+                                        <td>  <label> <input type="checkbox" value="" id="checkbox1"></label></td>
+                                        <td><?php echo 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'; ?> </td>
+                                         
+                                          <td>    <?php echo 'Group 5'; ?> </td>
+                                            
+                                    </tr>
+                                   <tr>
+                                        <td>  <label> <input type="checkbox" value="" id="checkbox1"></label></td>
+                                        <td><?php echo 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'; ?> </td>
+                                         <td><?php echo 'Group 6'; ?> </td>                                            
+                                    </tr>
+                                                         
+                                </tbody>
+                            </table>
+                            </div>  
+                                  
+                              </div>
               <div class="col-lg-12">
+                  
+                  
                        <form role="form">
                            
                                      <div class=" panel panel-primary" id="question-table-new">
