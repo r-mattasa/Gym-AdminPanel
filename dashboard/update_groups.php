@@ -19,6 +19,7 @@
 
     <!-- Morris Charts CSS -->
     <link href="../css/plugins/morris.css" rel="stylesheet">
+   
 
     <!-- Custom Fonts
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -29,165 +30,213 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+   
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script language="javascript">
-   $(function(){$("#selectall").click(function(){
-    $('#checkbox1').attr('checked',this.checked);});
-    $("checkbox1").click(function(){
-    if($("#selectall").length==$(".case:checked").length){
-    $("#selectall").attr("checked","checked");}
-    else{
-    $("#selectall").removeAttr("checked");}});
-    });
-    </script>
+    
 </head>
 
 <body>
-
+   <?php include("DB_Connect.php"); ?>
     <div id="wrapper">
 
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="home.html">Welcome Admin</a>
-            </div>
+        <?php include("navbar_header.php");?>
             <!-- Top Menu Items -->
-         <?php include("TopmenuItems.php")?>
+         <?php include("TopmenuItems.php");?>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <?php include("side_navbar.html") ?>
-            <!-- /.navbar-collapse -->
+            <?php include("side_navbar.html"); ?>
+            <!-- navbar-collapse -->
         </nav>
 
         <div id="page-wrapper">
 
-            
+            <div class="container-fluid">
 
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                         <small> Edit/Update groups</small>
+                         <small>  Add Questions</small>
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
                                 <i class="fa fa-dashboard"></i> <a href="index.php">Dashboard</a>
                             </li>
-                             <li class="active">
-                                <i class="fa fa-dashboard"></i> Manage Groups
+                            <li class="active">
+                                <i class="fa fa-edit"></i>Question Bank
                             </li>
                         </ol>
                     </div>
                 </div>
                 <!-- /.row --> 
-               <!-- column text input-->
-               <div class="row">
-                   <div class="col-lg-12">
-                       <div class="table-responsive" id="groups">
+           <div class="row text-left">
+      
+       <p> <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Create New Group</a></p>
+     
+        <div class="table-responsive" id="questions">
                             <table class="table table-bordered table-hover table-striped">
                                 <thead>
                                     <tr>
-                                        <th>
-                                            <label>
-                                        <input type="checkbox" value="select all" id="select_all"> </label></th>
-                                        
-                                        <th>Group</th>
-                                        <th>Edit</th>
+                                        <th><label>
+                                        <input type="checkbox" value=""> </label></th>
+                                     
+                                        <th>Group Name</th>
+                                           <th>Total number of Questions</th>
+                                         <th>Edit</th>
                                         <th>Delete</th>
                                     </tr>
                                 </thead>
+                                <?php 
+                               //$query = mysql_query("select * from tb_group"); 
+                                //$i=1;
+
+                               // while($data=mysql_fetch_array($query)){
+
+                               // }?>
+
                                 <tbody>
+                                     <tr>
+                                        <td>  <label> <input type="checkbox" value=""></label></td>
+                                        <td>GYM Equipments </td>
+                                        <td><span class="edit"> 5 </span></td>
+                                        <td> <a href="edit_questions.php"> <span class="glyphicon glyphicon-pencil"></span>   </a></td>
+                                        <td><a href="#">  <span class="glyphicon glyphicon-trash"></span>  </a></td>
+                                      </tr>
                                     <tr>
-                                        <td>  <label> <input type="checkbox" value="" id="checkbox1"></label></td>
-                                        <td><a href="Question_bank.php?id="><?php echo 'Gym equipement'; ?> </a></td>
-                                          
-                                          <td>     <a href="edit_groups.php"> <span class="glyphicon glyphicon-pencil"></span>   </a></td>
+                                        <td>  <label> <input type="checkbox" value=""></label></td>
+                                        <td><?php echo 'Lorem ipsum dolor'; ?> </td>
+                                          <td><?php echo ' 2'; ?> </td>
+                                          <td><a href="edit_questions.php"> <span class="glyphicon glyphicon-pencil"></span>   </a></td>
                                         <td> <a href="#">  <span class="glyphicon glyphicon-trash"></span>  </a></td>
-                                      
-                                       
+                                                                         
                                     </tr>
+                             
                                     <tr>
-                                        <td>  <label> <input type="checkbox" id="checkbox1" value=""></label></td>
-                                        
-                                        <td><a href="Question_bank.php">Gym service</a></td>
-                                        <td> <a href="#"> <span class="glyphicon glyphicon-pencil"></span>   </a></td>
-                                        <td><a href="#">  <span class="glyphicon glyphicon-trash"></span>  </a></td>
-                                        
-                                    </tr>
-                                    <tr>
-                                        <td>  <label> <input type="checkbox" id="checkbox1"  value=""> </label></td>
-                                        <td><a href="Question_bank.php">Gym Equipment</a></td>
+                                        <td>  <label> <input type="checkbox" value=""> </label></td>
+                                        <td>How I feel about myself as a person </td>
+                                             <td><?php echo '3'; ?> </td>
                                         <td>     <a href="#"> <span class="glyphicon glyphicon-pencil"></span>   </a></td>
                                         <td><a href="#">  <span class="glyphicon glyphicon-trash"></span>  </a></td>
                                         
                                     </tr>
-                                    <tr>
-                                        <td>  <label> <input type="checkbox" id="checkbox1" value=""> </label></td>
-                                        
-                                        <td><a href="Question_bank.php">Group 4</a></td>
-                                        <td>     <a href="#"> <span class="glyphicon glyphicon-pencil"></span>   </a></td>
-                                        <td><a href="#">  <span class="glyphicon glyphicon-trash"></span>  </a></td>
-                                        
-                                    </tr>
-                                    <tr>
-                                        <td>  <label> <input type="checkbox" id="checkbox1" value=""> </label></td>
-                                        
-                                        <td><a href="Question_bank.php">Group 1</a></td>
-                                        <td>  <a href="#"> <span class="glyphicon glyphicon-pencil"></span>  </a></td>
-                                        <td><a href="#">  <span class="glyphicon glyphicon-trash"></span>  </a></td>
-                                        
-                                    </tr>
-                                            <tr>
-                                        <td>  <label> <input type="checkbox" id="checkbox1" value=""> </label></td>
-                                        
-                                        <td><a href="Question_bank.php">Group 3</a></td>
-                                        <td>     <a href="#"> <span class="glyphicon glyphicon-pencil"></span>   </a></td>
-                                        <td><a href="#">  <span class="glyphicon glyphicon-trash"></span>  </a></td>
-                                        
-                                    </tr>
-                                    <tr>
-                                        <td>  <label> <input type="checkbox" id="checkbox1" value=""> </label></td>
-                                        
-                                        <td><a href="Question_bank.php">Group 4</a></td>
-                                        <td>     <a href="#"> <span class="glyphicon glyphicon-pencil"></span>   </a></td>
-                                        <td><a href="#">  <span class="glyphicon glyphicon-trash"></span>  </a></td>
-                                        
-                                    </tr>
-                                    <tr>
-                                        <td>  <label> <input type="checkbox" id="checkbox1" value=""> </label></td>
-                                        
-                                        <td><a href="Question_bank.php">Group 1</a></td>
-                                        <td>  <a href="#"> <span class="glyphicon glyphicon-pencil"></span>  </a></td>
-                                        <td><a href="#">  <span class="glyphicon glyphicon-trash"></span>  </a></td>
-                                        
-                                    </tr>
+                             
                                   
                                 </tbody>
                             </table>
-                           
-
+            
                         </div>
-                        <button type="submit" class="btn btn-default">Set as current feedback display questions</button>
-                         <button type="submit" class="btn btn-default">Edit</button>
-                   </div>
-                   
-                  
-               </div>
-                <!-- /.feedback stmt -->
-              
-          
-              
+  </div>
+        
+  <div class="modal fade " id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Add new Record</h4>
+      </div>
+      <div class="modal-body">
       
+                        <div class="entry-form" id="new_entry" style="padding-top:0px;">
+                        <form role="form" name="userinfo">
+                         <div  id="new_group">
+                             <div class="form-group modal-sm">
+                                 <p> <input class="form-control" id="groupName" name="groupname" required="" placeholder="Enter group Name"> </p>
+                                <p> <button type="button" id="define_newques" class="btn btn-primary pull-left">Define New Questions</button></p>
+                             </div>
+                             <br>
+                             <br>
+                                 
+                             <p  style="padding-left: 36px;" class=" text-left">OR</p>
+                                
+                                     
+                                 <div class="form-group">
+                                     <p><button type="button" id="add_questions"  class="btn btn-primary">Select existing questions</button></p>
+                                     
+                                 </div>  
+                              
+                            <div class=""  id="question_table" >
+                             <table class="table table-bordered table-hover table-striped">
+                                 <thead class="bg-primary">
+                                    <tr>
+                                        <th><label>Select </label></th>
+                                    <th>Questions</th>
+                                         <th>   
+                                     <select class="form-control">
+                                    <option id="1">Gym Equipment</option>
+                                    <option id="2">Gym Service</option>
+                                    <option id="3">Group 1</option>
+                                    <option id="5">Group 2</option>
+                                    <option id="6">Group 3</option>
+                                </select>
+                                         </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                     <tr>
+                                         <td>  <label><input type="checkbox" value="" id="checkbox1"> </label></td>
+                                        <td>How would you rate your overall experience so far with  Fitness gym </td>
+                                        <td><?php echo 'Group 1'; ?> </td>                                  
+                                    </tr>
+                                    <tr>
+                                        <td>  <label> <input type="checkbox" value="" id="checkbox1"></label></td>
+                                        <td><?php echo 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'; ?> </td>
+                                         
+                                          <td>    <?php echo 'Group 2'; ?> </td>
+                                            
+                                    </tr>
+                                          <tr>
+                                        <td>  <label> <input type="checkbox" value="" id="checkbox1"></label></td>
+                                        <td><?php echo 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'; ?> </td>
+                                         
+                                          <td>    <?php echo 'Group 5'; ?> </td>
+                                            
+                                    </tr>
+                                   <tr>
+                                        <td>  <label> <input type="checkbox" value="" id="checkbox1"></label></td>
+                                        <td><?php echo 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'; ?> </td>
+                                         <td><?php echo 'Group 6'; ?> </td>                                            
+                                    </tr>
+                                                         
+                                </tbody>
+                            </table>
+                            </div>  
+                            <div class=" panel panel-primary" style="display:none;" id="question-table-new">
+                                  <div class="panel-heading">
+                                    <h3 class="panel-title">Define New questions</h3>
+                                </div>
+                                <div class="panel-body">
+                                 <div class="form-group ">
+                                <label for="exampleInputFile">Enter your question </label>
+                                <input class="form-control" id="question_id" required="" placeholder="Enter question">
+                                </div>
+                             <div class="form-group modal-sm">
+                             <label>Select a group to add the question</label>
+                              <select class="form-control" id="group_id">
+                                <option>Select group </option>
+                                <option id="1"><?php echo 'group 1'; ?></option>                                   
+                                </select>
+                             </div>
+                                    
+                           </div>
+                        
+             
+
+                        </form>  
+                           </div>
+                          </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" value="done" id="done" class="btn btn-primary">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+            
                 <!-- /.row -->
       
-            
+            </div>
             <!-- /.container-fluid -->
 
         </div>
@@ -196,19 +245,18 @@
     </div>
     <!-- /#wrapper -->
 
-  
-
+   
     <!-- Bootstrap Core JavaScript -->
      <!-- jQuery -->
-    <script src="../js/jquery.js"></script>
+      <script src="../js/jquery.js"></script>
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/add_group.js"></script>
 
 
 
 </body>
 
 </html>
-
-

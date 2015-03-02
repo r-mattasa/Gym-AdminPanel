@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>FeedBack Admin template</title>
+    <title>SB Admin - Bootstrap Admin Template</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -30,22 +30,21 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    
 </head>
 
 <body>
-   <?php include("DB_Connect.php"); ?>
+
     <div id="wrapper">
 
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
-        <?php include("navbar_header.php");?>
+   <?php include "navbar_header.php";?>
             <!-- Top Menu Items -->
-         <?php include("TopmenuItems.php");?>
+         <?php include "TopmenuItems.php";?>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <?php include("side_navbar.html"); ?>
-            <!-- navbar-collapse -->
+            <?php require 'side_navbar.html';  ?>
+            <!-- /.navbar-collapse -->
         </nav>
 
         <div id="page-wrapper">
@@ -60,146 +59,19 @@
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
-                                <i class="fa fa-dashboard"></i> <a href="index.php">Dashboard</a>
+                                <i class="fa fa-dashboard"></i> Dashboard
                             </li>
-                            <li class="active">
-                                <i class="fa fa-edit"></i>Question Bank
+                             <li class="active">
+                                <i class="fa fa-edit"></i>Add Questions
                             </li>
                         </ol>
                     </div>
                 </div>
-                <!-- /.row --> 
-           <div class="row text-center">
-      
-       <p> <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Add Record</a></p>
-      
-        <div class="table-responsive" id="questions">
-                            <table class="table table-bordered table-hover table-striped">
-                                <thead>
-                                    <tr>
-                                        <th><label>
-                                        <input type="checkbox" value=""> </label></th>
-                                        <th>Questions</th>
-                                        <th>Group Name</th>
-                                         <th>Edit</th>
-                                        <th>Delete</th>
-                                    </tr>
-                                </thead>
-                                <?php 
-                               //$query = mysql_query("select * from tb_group"); 
-                                //$i=1;
-
-                               // while($data=mysql_fetch_array($query)){
-
-                               // }?>
-
-                                <tbody>
-                                     <tr>
-                                        <td>  <label> <input type="checkbox" value=""></label></td>
-                                        <td>How would you rate your overall experience so far with  Fitness gym </td>
-                                        <td><span class="edit">value 5 </span></td>
-                                        <td> <a href="edit_questions.php"> <span class="glyphicon glyphicon-pencil"></span>   </a></td>
-                                        <td><a href="#">  <span class="glyphicon glyphicon-trash"></span>  </a></td>
-                                      </tr>
-                                    <tr>
-                                        <td>  <label> <input type="checkbox" value=""></label></td>
-                                        <td><?php echo 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'; ?> </td>
-                                          <td><?php echo 'group 2'; ?> </td>
-                                          <td><a href="edit_questions.php"> <span class="glyphicon glyphicon-pencil"></span>   </a></td>
-                                        <td> <a href="#">  <span class="glyphicon glyphicon-trash"></span>  </a></td>
-                                                                         
-                                    </tr>
-                             
-                                    <tr>
-                                        <td>  <label> <input type="checkbox" value=""> </label></td>
-                                        <td>How I feel about myself as a person </td>
-                                             <td><?php echo 'group 3'; ?> </td>
-                                        <td>     <a href="#"> <span class="glyphicon glyphicon-pencil"></span>   </a></td>
-                                        <td><a href="#">  <span class="glyphicon glyphicon-trash"></span>  </a></td>
-                                        
-                                    </tr>
-                             
-                                  
-                                </tbody>
-                            </table>
-                            
-                        </div>
-  </div>
-        
-  <div class="modal fade " id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header bg-primary">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Add new Record</h4>
-      </div>
-      <div class="modal-body">
-      
-                        <div class="entry-form" id="new_entry" style="padding-top:0px;">
-                        <form role="form" name="userinfo">
-                         <div  id="new_group">
-                             <div class="form-group modal-sm">
-                                 <p> <input class="form-control" id="groupName" name="groupname" required="" placeholder="Enter group Name"> </p>
-                                <p> <button type="button" id="define_newques" class="btn btn-primary pull-left">Define New Questions</button></p>
-                             </div>
-                             <br>
-                             <br>
-                                 
-                             <p  style="padding-left: 36px;" class=" text-left">OR</p>
-                                
-                                     
-                                 <div class="form-group">
-                                     <p><button type="button" id="add_questions"  class="btn btn-primary">Select existing questions</button></p>
-                                     
-                                 </div>  
-                              
-                            <div class=""  id="question_table" >
-                             <table class="table table-bordered table-hover table-striped">
-                                 <thead class="bg-primary">
-                                    <tr>
-                                        <th><label>Select </label></th>
-                                    <th>Questions</th>
-                                         <th>   
-                                     <select class="form-control">
-                                    <option id="1">Gym Equipment</option>
-                                    <option id="2">Gym Service</option>
-                                    <option id="3">Group 1</option>
-                                    <option id="5">Group 2</option>
-                                    <option id="6">Group 3</option>
-                                </select>
-                                         </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                     <tr>
-                                         <td>  <label><input type="checkbox" value="" id="checkbox1"> </label></td>
-                                        <td>How would you rate your overall experience so far with  Fitness gym </td>
-                                        <td><?php echo 'Group 1'; ?> </td>                                  
-                                    </tr>
-                                    <tr>
-                                        <td>  <label> <input type="checkbox" value="" id="checkbox1"></label></td>
-                                        <td><?php echo 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'; ?> </td>
-                                         
-                                          <td>    <?php echo 'Group 2'; ?> </td>
-                                            
-                                    </tr>
-                                          <tr>
-                                        <td>  <label> <input type="checkbox" value="" id="checkbox1"></label></td>
-                                        <td><?php echo 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'; ?> </td>
-                                         
-                                          <td>    <?php echo 'Group 5'; ?> </td>
-                                            
-                                    </tr>
-                                   <tr>
-                                        <td>  <label> <input type="checkbox" value="" id="checkbox1"></label></td>
-                                        <td><?php echo 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'; ?> </td>
-                                         <td><?php echo 'Group 6'; ?> </td>                                            
-                                    </tr>
-                                                         
-                                </tbody>
-                            </table>
-                            </div>  
-                            <div class=" panel panel-primary" style="display:none;" id="question-table-new">
+                          <div class="row">
+              <div class="col-lg-12">
+                       <form role="form">
+                           
+                                     <div class=" panel panel-primary" id="question-table-new">
                                   <div class="panel-heading">
                                     <h3 class="panel-title">Define New questions</h3>
                                 </div>
@@ -217,20 +89,28 @@
                              </div>
                                     
                            </div>
-                        
-             
-
-                        </form>  
-                           </div>
+                           <div class="panel-footer">
+                            <button type="button"  value="done" id="add_more" class="btn btn-primary">Add More</button>
+                            <button type="button" value="done" id="add_question" class="btn btn-primary">Add Question</button>
                           </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" value="done" id="done" class="btn btn-primary">Update</button>
-      </div>
-    </div>
-  </div>
-</div>
-            
+                           </div>
+                           
+                       </form>
+                       <br>
+                       <br>
+                   </div>
+                 
+                </div>
+                <!-- /.row --> 
+               <!-- column text input-->
+         
+                <!-- /.feedback stmt -->
+              
+          
+                <!-- /.row -->
+              
+              
+      
                 <!-- /.row -->
       
             </div>
@@ -242,17 +122,13 @@
     </div>
     <!-- /#wrapper -->
 
-   
+  
     <!-- Bootstrap Core JavaScript -->
      <!-- jQuery -->
     <script src="../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/add_group.js"></script>
-
-
-
 </body>
 
 </html>
