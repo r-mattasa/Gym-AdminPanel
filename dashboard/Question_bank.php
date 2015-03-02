@@ -80,7 +80,7 @@
                                 </thead>
                                 <tbody>
                                      <tr>
-                                         <td>  <label><input type="checkbox" value="" id="checkbox1"> </label></td>
+                                         <td><label><input type="checkbox" value="" id="checkbox1"> </label></td>
                                         <td>How would you rate your overall experience so far with  Fitness gym </td>
                                         <td><?php echo 'Group 1'; ?> </td>                                  
                                     </tr>

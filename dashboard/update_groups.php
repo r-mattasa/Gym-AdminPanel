@@ -170,7 +170,7 @@
                                     <option id="5">Group 2</option>
                                     <option id="6">Group 3</option>
                                 </select>
-                                         </th>
+                                  </th>
                                     </tr>
                                 </thead>
                                 <tbody>
