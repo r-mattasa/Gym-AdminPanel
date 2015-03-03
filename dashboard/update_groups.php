@@ -75,7 +75,7 @@
       
        <p> <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Create New Group</a></p>
      
-        <div class="table-responsive" id="questions">
+                            <div class="table-responsive" id="questions">
                             <table class="table table-bordered table-hover table-striped">
                                 <thead>
                                     <tr>
@@ -127,6 +127,25 @@
                             </table>
             
                         </div>
+                            <nav>
+                             <ul class="pagination pull-right">
+                              <li>
+                               <a href="#" aria-label="Previous">
+                             <span aria-hidden="true">&laquo;</span>
+                             </a>
+                              </li>
+                              <li><a href="#">1</a></li>
+                              <li><a href="#">2</a></li>
+                              <li><a href="#">3</a></li>
+                              <li><a href="#">4</a></li>
+                              <li><a href="#">5</a></li>
+                              <li>
+                                <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
   </div>
         
   <div class="modal fade " id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
@@ -201,7 +220,34 @@
                                                          
                                 </tbody>
                             </table>
-                            </div>  
+                                   <div class="pull-right">
+                                    <nav>
+                                    <ul class="pagination ">
+        <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+                             </div>
+                                <br>
+                                <br>
+                                 <br>
+                                <br>
+                              >
+                            </div> 
+  
                             <div class=" panel panel-primary" style="display:none;" id="question-table-new">
                                   <div class="panel-heading">
                                     <h3 class="panel-title">Define New questions</h3>
@@ -220,14 +266,14 @@
                              </div>
                                     
                            </div>
-                        
+   
              
 
                         </form>  
                            </div>
                           </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
         <button type="button" value="done" id="done" class="btn btn-primary">Update</button>
       </div>
     </div>
