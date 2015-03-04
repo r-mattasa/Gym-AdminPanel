@@ -16,11 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="../css/sb-admin/sb-admin.css" rel="stylesheet">
-
-    <!-- Morris Charts CSS -->
-    <link href="../css/plugins/morris.css" rel="stylesheet">
-
-    <!-- Custom Fonts
+   <!-- Custom Fonts
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
  -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -59,7 +55,7 @@
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
-                                <i class="fa fa-dashboard"></i> Dashboard
+                                 <i class="fa fa-dashboard"><a href="index.php">Dashboard</a></i> 
                             </li>
                              <li class="active">
                                 <i class="fa fa-edit"></i>Add Questions
@@ -68,7 +64,41 @@
                     </div>
                 </div>
                           <div class="row">
-                              <div class="col-lg-12">
+                            
+              <div class="col-lg-12">
+                  
+                  
+                       <form role="form">
+                           
+                                     <div class=" panel panel-primary" id="question-table-new">
+                                  <div class="panel-heading">
+                                    <h3 class="panel-title">Define New questions</h3>
+                                </div>
+                                <div class="panel-body">
+                                 <div class="form-group ">
+                                <label for="exampleInputFile">Enter your question </label>
+                                <input class="form-control" id="question_id" required="" placeholder="Enter question">
+                                </div>
+                             <div class="form-group modal-sm">
+                             <label>Select a group to add the question</label>
+                              <select class="form-control" id="group_id">
+                                <option>Select group </option>
+                                <option id="1"><?php echo 'group 1'; ?></option>                                   
+                                </select>
+                             </div>
+                                    
+                           </div>
+                           <div class="panel-footer">
+                            <button type="submit" value="done" id="add_question" class="btn btn-primary">Add Question</button>
+                          </div>
+                           </div>
+                           
+                       </form>
+                       <br>
+                       <br>
+                   </div>
+                              
+                                <div class="col-lg-12">
                                <div class=""  id="question_table" >
                              <table class="table table-bordered table-hover table-striped">
                                  <thead class="bg-primary">
@@ -109,39 +139,6 @@
                             </div>  
                                   
                               </div>
-              <div class="col-lg-12">
-                  
-                  
-                       <form role="form">
-                           
-                                     <div class=" panel panel-primary" id="question-table-new">
-                                  <div class="panel-heading">
-                                    <h3 class="panel-title">Define New questions</h3>
-                                </div>
-                                <div class="panel-body">
-                                 <div class="form-group ">
-                                <label for="exampleInputFile">Enter your question </label>
-                                <input class="form-control" id="question_id" required="" placeholder="Enter question">
-                                </div>
-                             <div class="form-group modal-sm">
-                             <label>Select a group to add the question</label>
-                              <select class="form-control" id="group_id">
-                                <option>Select group </option>
-                                <option id="1"><?php echo 'group 1'; ?></option>                                   
-                                </select>
-                             </div>
-                                    
-                           </div>
-                           <div class="panel-footer">
-                            <button type="button"  value="done" id="add_more" class="btn btn-primary">Add More</button>
-                            <button type="button" value="done" id="add_question" class="btn btn-primary">Add Question</button>
-                          </div>
-                           </div>
-                           
-                       </form>
-                       <br>
-                       <br>
-                   </div>
                  
                 </div>
                 <!-- /.row --> 
