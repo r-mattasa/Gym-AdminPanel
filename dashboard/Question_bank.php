@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title>Gym FeedBack Admin template</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -44,14 +44,13 @@
         </nav>
 
         <div id="page-wrapper">
-
             <div class="container-fluid">
 
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                         <small>  Add Questions</small>
+                         <small>  Organize Questions</small>
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
@@ -103,7 +102,7 @@
                              <table class="table table-bordered table-hover table-striped">
                                  <thead class="bg-primary">
                                     <tr>
-                                        <th><label>Select </label></th>
+                                        <th><label>Selection </label></th>
                                     <th>Questions</th>
                                          <th> Group </th>
                                     </tr>

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>FeedBack Admin template</title>
+    <title>Gym FeedBack Admin template</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -55,29 +55,26 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                         <small>  Add Questions</small>
+                         <small>  Organize Groups </small>
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
                                 <i class="fa fa-dashboard"></i> <a href="index.php">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-edit"></i>Question Bank
+                                <i class="fa fa-edit"></i>Manage Groups
                             </li>
                         </ol>
                     </div>
                 </div>
                 <!-- /.row --> 
            <div class="row text-left">
-      
-       <p> <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Create New Group</a></p>
-     
-                            <div class="table-responsive" id="questions">
+                                  <div class=" col-lg-12" id="questions">
+                             <p> <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Create New Group</a></p>
                             <table class="table table-bordered table-hover table-striped">
                                 <thead>
-                                    <tr>
-                                        <th><label>
-                                        <input type="checkbox" value=""> </label></th>
+                                    <tr class="bg-primary">
+                                        <th>Group Id </th>
                                      
                                         <th>Group Name</th>
                                            <th>Total number of Questions</th>
@@ -85,24 +82,17 @@
                                         <th>Delete</th>
                                     </tr>
                                 </thead>
-                                <?php 
-                               //$query = mysql_query("select * from tb_group"); 
-                                //$i=1;
-
-                               // while($data=mysql_fetch_array($query)){
-
-                               // }?>
-
+                            
                                 <tbody>
                                      <tr>
-                                        <td>  <label> <input type="checkbox" value=""></label></td>
+                                        <td>  <?php echo 'GRP1'; ?></td>
                                         <td>GYM Equipments </td>
                                         <td><span class="edit"> 5 </span></td>
                                         <td> <a href="edit_questions.php"> <span class="glyphicon glyphicon-pencil"></span>   </a></td>
                                         <td><a href="#">  <span class="glyphicon glyphicon-trash"></span>  </a></td>
                                       </tr>
                                     <tr>
-                                        <td>  <label> <input type="checkbox" value=""></label></td>
+                                        <td> <?php echo 'GRP2'; ?></td>
                                         <td><?php echo 'Lorem ipsum dolor'; ?> </td>
                                           <td><?php echo ' 2'; ?> </td>
                                           <td><a href="edit_questions.php"> <span class="glyphicon glyphicon-pencil"></span>   </a></td>
@@ -111,7 +101,7 @@
                                     </tr>
                              
                                     <tr>
-                                        <td>  <label> <input type="checkbox" value=""> </label></td>
+                                        <td>  <?php echo 'GRP3'; ?></td>
                                         <td>How I feel about myself as a person </td>
                                              <td><?php echo '3'; ?> </td>
                                         <td>     <a href="#"> <span class="glyphicon glyphicon-pencil"></span>   </a></td>
